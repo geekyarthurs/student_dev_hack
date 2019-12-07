@@ -26,7 +26,8 @@ def login():
             session['username'] = username
 
 
-@app.route("/register"):
+@app.route("/register")
+
 
 
 if __name__ == '__main__':  
