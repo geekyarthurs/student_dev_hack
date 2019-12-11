@@ -1,12 +1,10 @@
 from flask import Flask, render_template, url_for, flash, redirect, session, request
 import math
-from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
 from ai_api import detect_image
 app = Flask(__name__, static_folder='static')
 app.secret_key = 'prapannaisniceguyhehasfivegirlfriends'
 app.config['MONGO_URI'] = "mongodb://localhost:27017/student_dev_hack"
-mongo = PyMongo(app)
+
 
 
 @app.route("/")
@@ -48,7 +46,6 @@ def detect():
                 "energy": "60 kcal",
                 "imageUrl": "https://i.ytimg.com/vi/QvQy2ifqoHU/maxresdefault.jpg"
 
-<<<<<<< HEAD
             }, "wheat flour": {
                 "fullname": "Selroti",
                 "ingredients": ["rice flour", "water", "sugar", "butter"],
@@ -57,9 +54,6 @@ def detect():
                 "price": "Rs. 100",
                 "energy": "60 kcal",
                 "imageUrl": "https://i.ytimg.com/vi/QvQy2ifqoHU/maxresdefault.jpg"
-=======
-@app.route("/register")
->>>>>>> 5f6483e4554d3d5be2fb14902e6ace4a0ca1f34e
 
             }, "wontons": {
                 "fullname": "MOMO",
@@ -84,13 +78,6 @@ def detect():
                 "imageUrl": "https://m.recipes.timesofindia.com/recipes/samosa/photo/61050397.cms"
             }}
 
-<<<<<<< HEAD
-            # DalBhat = {
-            #     "fullname": "Dalbat",
-            #     "ingredients": ["Rice", "vegetable", "lentils", "chutney"],
-            #     "types": ["Nepali", "Thakali", "Indian", "Srilanka"],
-            #     "energy": "800 kcal"
-            #
 
         for image in images:
 
@@ -103,8 +90,4 @@ def detect():
 
 
 app.run(debug=True)
-=======
 
-if __name__ == '__main__':  
-   app.run(debug = True)  
->>>>>>> 5f6483e4554d3d5be2fb14902e6ace4a0ca1f34e
