@@ -203,7 +203,7 @@ button {
  {% if error %}
 
 
-  <script>alert("NOT FOUND")</script>
+  <script>alert("{{error}}")</script>
 
 
  {% endif %}
@@ -230,7 +230,7 @@ button {
         </div>
         
         <div class="form-group">
-          <button type="submit" class = "w-100">Search</button>
+          <button type="submit" class = "w-100">Search</button><br><b class = "text-center mt-2"></b>
         </div>
         
       </form>
