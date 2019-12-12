@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, flash, redirect, session, req
 import math
 from ai_api import detect_image
 app = Flask(__name__, static_folder='static')
+app.secret_key = 'apisecretkey'
 app.config['MONGO_URI'] = "mongodb://localhost:27017/student_dev_hack"
 
 
