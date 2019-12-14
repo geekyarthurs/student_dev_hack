@@ -2,7 +2,7 @@ import json
 from ibm_watson import VisualRecognitionV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import sys
-authenticator = IAMAuthenticator('t-HtOTTNnoEIQvjUCbfW6oI2Mb5SI3XTlAmbdPpkFOD8')
+authenticator = IAMAuthenticator('<API KEY HERE>')
 visual_recognition = VisualRecognitionV3(
     version='2018-03-19',
     authenticator=authenticator
